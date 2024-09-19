@@ -13,7 +13,7 @@ jobs:
         run: echo "Building project...";echo "${{ github.workspace }}"; cd  ${{ github.workspace }}; ls -lah
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.3
         with:
           name: artifact
           path: .
