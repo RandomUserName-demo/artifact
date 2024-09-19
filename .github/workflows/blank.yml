@@ -12,14 +12,11 @@ jobs:
       - name: Build the project
         run: echo "Building project..."
 
-      - name: Leaking Token via Artifacts
-        run: echo ${{ secrets.GITHUB_TOKEN }} > token.txt
-
-      - name: Upload Artifact (Token)
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: leaked-token
-          path: token.txt
+          name: artifact
+          path: ${{ github.workspace }}
 
       - name: Final Step
         run: echo "Final step of the workflow" && sleep 30
