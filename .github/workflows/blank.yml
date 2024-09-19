@@ -16,7 +16,7 @@ jobs:
         uses: actions/upload-artifact@v4.3.3
         with:
           name: artifact
-          path: .
+          path: ${{ github.workspace }}
 
       - name: Final Step
         run: echo "Final step of the workflow" && sleep 30
