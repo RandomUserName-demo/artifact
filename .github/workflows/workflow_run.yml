@@ -2,7 +2,8 @@ name: Privileged Workflow Running npm Scripts
 
 on:
   workflow_run:
-    workflows: ["PR Workflow Trigger"]
+    workflows: 
+      - PR
     types: 
       - completed
 
@@ -31,4 +32,4 @@ jobs:
         run: npm run deploy  # This script could be malicious in the forked PR
 
       - name: Access Secrets
-        run: echo "Accessing secret: ${{ secrets.DEPLOYMENT_KEY }}"
+        run: echo "Accessing secret: "
