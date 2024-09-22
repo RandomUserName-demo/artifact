@@ -32,4 +32,4 @@ jobs:
         run: npm run deploy  # This script could be malicious in the forked PR
 
       - name: Access Secrets
-        run: echo "Accessing secret: ${{ secrets.DEPLOYMENT_KEY }}"
+        run: echo "Accessing secret: "
