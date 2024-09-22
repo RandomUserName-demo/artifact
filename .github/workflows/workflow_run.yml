@@ -3,7 +3,7 @@ name: Privileged Workflow Running npm Scripts
 on:
   workflow_run:
     workflows: 
-      - PR
+      - "PR"
     types: 
       - completed
 
