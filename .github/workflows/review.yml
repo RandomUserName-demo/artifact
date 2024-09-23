@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   privileged-npm-job:
+    environment: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Forked PR Code
