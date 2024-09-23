@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Forked PR Code
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head.ref }}
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
