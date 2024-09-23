@@ -2,7 +2,7 @@
   "name": "vulnerable-repo",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo malicious",
+    "build": "echo malicious, updated script",
     "deploy": "echo malicious"
   }
 }
