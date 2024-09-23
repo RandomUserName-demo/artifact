@@ -1,11 +1,9 @@
-name: Privileged Workflow Running npm Scripts
+name: Run on review
 
 on:
-  workflow_run:
-    workflows:
-      - "PR"
-    types:
-      - completed
+  pull_request_target:
+    branches:
+      - main
 
 jobs:
   privileged-npm-job:
@@ -14,7 +12,7 @@ jobs:
       - name: Checkout Forked PR Code
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
+          ref: ${{ github.event.workflow_run.head.ref }}
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
